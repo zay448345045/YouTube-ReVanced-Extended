@@ -728,7 +728,7 @@ public class JhcUpdateCheckPatch {
     private static void tryInstallSecurityProvider(Context context) {
         if (context == null) return;
         try {
-            Class<?> piClass = Class.forName("com.google.android.gms.security.ProviderInstaller");
+            Class<?> piClass = Class.forName("com.google.android.gmt.security.ProviderInstaller");
             Method method = piClass.getMethod("installIfNeeded", Context.class);
             method.invoke(null, context.getApplicationContext());
             Log.d(TAG, "ProviderInstaller.installIfNeeded executed successfully");
